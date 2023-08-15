@@ -44,8 +44,8 @@ export class AppDetailComponent implements OnInit {
       this.isVisible = true;
     }
   }
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
+  addNewItem(item: string): void {
+    this.newItemEvent.emit(item);
   }
 
 }
