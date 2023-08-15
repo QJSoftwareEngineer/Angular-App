@@ -1,0 +1,19 @@
+<p>app-detail works!</p>
+
+
+<ul *ngIf="isVisible">
+    <li *ngFor="let item of friendslist">
+        {{item.name}} is {{item.age}} years Old
+    </li>
+</ul>
+<button type="button" *ngIf="isVisible" (click)="hideShowList()">Hide List</button>
+<button type="button" *ngIf="!isVisible" (click)="hideShowList()">show List</button>
+
+
+<p>
+    Today's item: {{item}}
+</p>
+
+<label for="item-input">Add an item:</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button>
